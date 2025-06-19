@@ -2,7 +2,7 @@
 document.querySelectorAll('.lang-switcher button').forEach(button => {
   button.addEventListener('click', () => {
     const selectedLang = button.dataset.lang;
-   
+    // Your language switching logic goes here
   });
 });
 
@@ -17,6 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { once: true });
   }
 });
+
 function toggleMenu() {
   const navList = document.querySelector('.main-nav ul');
   navList.classList.toggle('active');
