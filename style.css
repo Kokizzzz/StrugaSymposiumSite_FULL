@@ -99,9 +99,10 @@ header {
     text-align: center;
   }
 
-  .main-nav ul.active {
-    display: flex;
-  }
+.main-nav.active ul {
+  display: flex;
+}
+
 
   .main-nav ul li {
     padding: 0.5rem 0;
