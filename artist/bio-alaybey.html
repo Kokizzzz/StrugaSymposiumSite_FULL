@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Prof. Dr. Alaybey Karoğlu – Plastic Arts Educator</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@300;600&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      margin:0; padding:0;
+      font-family:'Open Sans', sans-serif;
+      background:#fafafa; color:#333;
+      overflow-x:hidden;
+    }
+    header {
+      background: url('alaybey-bg.jpg') center/cover no-repeat;
+      color:#fff; text-align:center;
+      padding:150px 20px; position:relative;
+    }
+    header::after {
+      content:''; position:absolute; inset:0;
+      background:rgba(0,0,0,0.4);
+    }
+    header h1 {
+      font-family:'Playfair Display', serif;
+      font-size:3.5rem; position:relative; z-index:1;
+    }
+    header p {
+      font-size:1.2rem; margin-top:10px; position:relative; z-index:1;
+    }
+    .container { max-width:900px; margin:auto; padding:60px 20px; }
+    .section { margin-bottom:60px; opacity:0; transform:translateY(40px); transition:0.8s ease-out; }
+    .section.visible { opacity:1; transform:translateY(0); }
+    .section h2 { font-family:'Playfair Display', serif; font-size:2rem; color:#2a5d84; margin-bottom:15px; }
+    .section p { font-size:1rem; line-height:1.6; }
+    .contact {
+      background:#2a5d84; color:#fff;
+      padding:30px; text-align:center;
+    }
+    .contact a { color:#f9cb02; text-decoration:none; }
+  </style>
+</head>
+<body>
+
+ <header style="background: url('/assets/images2/Alaybey\ Karoğlu\ ok\ -\ Copy.jpg') center/cover no-repeat;">
+  <h1>Prof. Dr. Alaybey Karoğlu</h1>
+  <p>Turkey • Professor of Plastic Arts & Art Education</p>
+</header>
+
+<div class="container">
+  <section class="section" id="about">
+    <h2>🎨 About</h2>
+    <p>
+      Prof. Dr. Alaybey Karoğlu is a faculty member at Ankara Hacı Bayram Veli University, serving as Department Chair since 2013 and a member of the University Senate since 2011 :contentReference[oaicite:1]{index=1}. His expertise spans Plastic Arts education, painting history, and art pedagogy, and he holds a prominent academic profile including publications and editorial board roles :contentReference[oaicite:2]{index=2}.
+    </p>
+  </section>
+
+  <section class="section" id="work">
+    <h2>💼 Work</h2>
+    <p>
+      He has organized and participated in numerous juried international exhibitions—most notably the "Dreams, Truths & Illusions" exhibition on his 40th art anniversary—and frequently contributes to global art events in both creative and administrative roles :contentReference[oaicite:3]{index=3}. His research includes publications like “Reading Artwork with 3D in Painting,” and he serves on editorial and peer-review boards for journals such as Art Time and Sanat ve İkonografi :contentReference[oaicite:4]{index=4}.
+    </p>
+  </section>
+
+  <section class="section" id="role">
+    <h2>🤝 Role at Struga ’25</h2>
+    <p>
+      As a respected academic and practicing artist, Prof. Karoğlu will lead workshops in plastic arts pedagogy, host critique sessions, and support emerging artists with his extensive experience in exhibition design and visual arts education.
+    </p>
+  </section>
+
+  <section class="contact section" id="contact">
+    <h2>📬 Contact</h2>
+    <p>Email: <a href="mailto:alaybey.karoglu@hbv.edu.tr">alaybey.karoglu@hbv.edu.tr</a></p>
+    <p>Instagram • Facebook</p>
+  </section>
+</div>
+
+<script>
+  const sections = document.querySelectorAll('.section');
+  const onScroll = () => {
+    sections.forEach(sec => {
+      if (sec.getBoundingClientRect().top < window.innerHeight * 0.85) {
+        sec.classList.add('visible');
+      }
+    });
+  };
+  document.addEventListener('scroll', onScroll);
+  onScroll();
+</script>
+</body>
+</html>

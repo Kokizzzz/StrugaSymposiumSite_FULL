@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Lida Sherafatmand – Painter, Writer & Social Advocate</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@300;600&display=swap" rel="stylesheet"/>
+  <style>
+    body { margin:0; padding:0; font-family:'Open Sans',sans-serif; background:#fafafa; color:#333; overflow-x:hidden; }
+    header { background:url('lida-bg.jpg') center/cover no-repeat; color:#fff; text-align:center; padding:150px 20px; position:relative; }
+    header::after { content:''; position:absolute; inset:0; background:rgba(0,0,0,0.4); }
+    header h1 { font-family:'Playfair Display',serif; font-size:3.5rem; position:relative; z-index:1; }
+    header p { font-size:1.2rem; margin-top:10px; position:relative; z-index:1; }
+    .container { max-width:900px; margin:auto; padding:60px 20px; }
+    .section { margin-bottom:60px; opacity:0; transform:translateY(40px); transition: all 0.8s ease-out; }
+    .section.visible { opacity:1; transform:translateY(0); }
+    .section h2 { font-family:'Playfair Display',serif; font-size:2rem; color:#2a5d84; margin-bottom:15px; }
+    .section p { font-size:1rem; line-height:1.6; }
+    .contact { background:#2a5d84; color:#fff; padding:30px; text-align:center; }
+    .contact a { color:#f9cb02; text-decoration:none; }
+  </style>
+</head>
+<body>
+ <header style="background: url('/assets/images2/lida\ sh\ -\ Copy.jpg') center/cover no-repeat;">
+    <h1>Lida Sherafatmand</h1>
+    <p>Malta • Painter • Writer • Social Advocate</p>
+  </header>
+
+  <div class="container">
+    <section class="section" id="about">
+      <h2>🎨 About</h2>
+      <p>
+        Lida Sherafatmand (born Iran) is a painter, writer, and humanitarian artist. She founded and promotes “Florescencism”—an avant-garde movement rooted in beauty, healing, and connection, challenging trauma-focused art narratives :contentReference[oaicite:2]{index=2}.
+      </p>
+    </section>
+
+    <section class="section" id="work">
+      <h2>💼 Exhibitions & Collections</h2>
+      <p>
+        She has exhibited globally—solo and group shows in Venice (Biennale 2019), Tokyo, Geneva, Malta (European Parliament 2024), Netherlands, New Zealand, Struga International Poetry Festival 2023, and more :contentReference[oaicite:3]{index=3}.
+      </p>
+    </section>
+
+    <section class="section" id="impact">
+      <h2>🌍 Social Impact</h2>
+      <p>
+        Lida volunteers across Education, Health, Peace Building, and Cultural Development. Her paintings are used in hospitals, diplomatic settings, and interfaith gatherings, emphasising healing and unity :contentReference[oaicite:4]{index=4}.
+      </p>
+    </section>
+
+    <section class="section" id="style">
+      <h2>🖌️ Artistic Philosophy</h2>
+      <p>
+        Rooted in neurosaesthetics, energy medicine, and poetry, Florescencism emphasizes emotional restoration. Her works have been adapted as stamps (Liechtenstein, China), book covers, and institutional installations :contentReference[oaicite:5]{index=5}.
+      </p>
+    </section>
+
+    <section class="section" id="role">
+      <h2>🤝 Role at Struga ’25</h2>
+      <p>
+        At Struga ’25, Lida will offer workshops and dialogues centered on Florescencism, emotional wellness through art, and interfaith peace-building projects inspired by her global cultural practice.
+      </p>
+    </section>
+
+    <section class="contact section" id="contact">
+      <h2>📬 Contact</h2>
+      <p>Email: <a href="mailto:info@lida.gallery">info@lida.gallery</a></p>
+      <p>Instagram • Facebook • lida.gallery</p>
+    </section>
+  </div>
+
+  <script>
+    const sections = document.querySelectorAll('.section');
+    const onScroll = () => {
+      sections.forEach(sec => {
+        if (sec.getBoundingClientRect().top < window.innerHeight * 0.85) {
+          sec.classList.add('visible');
+        }
+      });
+    };
+    document.addEventListener('scroll', onScroll);
+    onScroll();
+  </script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Nedžma Zukorlić – Painter & Emerging Talent</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;display=swap&family=Open+Sans:wght@300;600&amp;display=swap" rel="stylesheet"/>
+  <style>
+    body { margin:0; padding:0; font-family:'Open Sans',sans-serif; background:#fafafa; color:#333; overflow-x:hidden; }
+    header { background:url('nedzma-bg.jpg') center/cover no-repeat; color:#fff; text-align:center; padding:150px 20px; position:relative;}
+    header::after { content:''; position:absolute; inset:0; background:rgba(0,0,0,0.4); }
+    header h1 { font-family:'Playfair Display',serif; font-size:3.5rem; position:relative; z-index:1; }
+    header p { font-size:1.2rem; margin-top:10px; z-index:1; position:relative; }
+    .container { max-width:900px; margin:auto; padding:60px 20px;}
+    .section { margin-bottom:60px; opacity:0; transform:translateY(40px); transition:all 0.8s ease-out;}
+    .section.visible { opacity:1; transform:translateY(0); }
+    .section h2 { font-family:'Playfair Display',serif; font-size:2rem; color:#2a5d84; margin-bottom:15px; }
+    .section p { font-size:1rem; line-height:1.6; }
+    .contact { background:#2a5d84; color:#fff; padding:30px; text-align:center;}
+    .contact a { color:#f9cb02; text-decoration:none; }
+  </style>
+</head>
+<body>
+ <header style="background: url('/assets/images2/nedzma\ z\ 2.jpg') center/cover no-repeat;">
+    <h1>Nedžma Zukorlić</h1>
+    <p>Serbia – Painter & Emerging Talent</p>
+  </header>
+
+  <div class="container">
+    <section class="section" id="about">
+      <h2>🎨 About</h2>
+      <p>
+        Born April 9, 1996 in Novi Pazar, Nedžma studied painting at the Gazi Isa-beg Madrasa. She earned her BA in Painting (2019) and later completed her Master’s at the Faculty of Fine Arts in Belgrade :contentReference[oaicite:1]{index=1}.
+      </p>
+    </section>
+
+    <section class="section" id="work">
+      <h2>💼 Exhibitions & Awards</h2>
+      <p>
+        She has held two solo exhibitions in Novi Pazar and Belgrade and participated in over 36 group exhibitions and three international art colonies :contentReference[oaicite:2]{index=2}. She won third prize at the Youth Art Salon in Novi Pazar :contentReference[oaicite:3]{index=3}.
+      </p>
+      <p>
+        In 2023, she co-exhibited with Nevena Milosavljević in “Ispod površine” at Gallery ’73 in Belgrade, followed by the “Senzibilitet u formi” show in Sarajevo :contentReference[oaicite:4]{index=4}.
+      </p>
+    </section>
+
+    <section class="section" id="style">
+      <h2>🎨 Style & Themes</h2>
+      <p>
+        Her work explores introspection and subtle sensibilities, both in form and content—often centering on personal and cultural identity through expressive portraiture and layered compositions.
+      </p>
+    </section>
+
+    <section class="section" id="role">
+      <h2>🤝 Role at Struga ’25</h2>
+      <p>
+        At Struga ’25, Nedžma brings youthful perspective and teaching experience. She will lead painting workshops focused on emotional expression, portraiture, and narrative visual language.
+      </p>
+    </section>
+
+    <section class="contact section" id="contact">
+      <h2>📬 Contact</h2>
+      <p>Email: <a href="mailto:">[Add email]</a></p>
+      <p>Instagram/FB • Novi Pazar • ULUS member</p>
+    </section>
+  </div>
+
+  <script>
+    const sections = document.querySelectorAll('.section');
+    const onScroll = () => {
+      sections.forEach(sec => {
+        if (sec.getBoundingClientRect().top < window.innerHeight * 0.85) sec.classList.add('visible');
+      });
+    };
+    document.addEventListener('scroll', onScroll);
+    onScroll();
+  </script>
+</body>
+</html>

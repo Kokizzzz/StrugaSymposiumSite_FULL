@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Jëlldëz Asani – Art Historian & Educator</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@300;600&display=swap" rel="stylesheet"/>
+  <style>
+    body { margin:0; padding:0; font-family:'Open Sans', sans-serif; background:#fafafa; color:#333; overflow-x:hidden; }
+    header { background:url('jelldez-bg.jpg') center/cover no-repeat; color:#fff; text-align:center; padding:150px 20px; position:relative; }
+    header::after { content:''; position:absolute; inset:0; background:rgba(0,0,0,0.4); }
+    header h1 { font-family:'Playfair Display', serif; font-size:3.5rem; position:relative; z-index:1; }
+    header p { font-size:1.2rem; margin-top:10px; position:relative; z-index:1; }
+    .container { max-width:900px; margin:auto; padding:60px 20px; }
+    .section { margin-bottom:60px; opacity:0; transform:translateY(40px); transition:all 0.8s ease-out; }
+    .section.visible { opacity:1; transform:translateY(0); }
+    .section h2 { font-family:'Playfair Display', serif; font-size:2rem; color:#2a5d84; margin-bottom:15px; }
+    .section p { font-size:1rem; line-height:1.6; }
+    .contact { background:#2a5d84; color:#fff; padding:30px; text-align:center; }
+    .contact a { color:#f9cb02; text-decoration:none; }
+  </style>
+</head>
+<body>
+ <header style="background: url('/assets/images2/jelldez.jpg') center/cover no-repeat;">
+    <h1>Jëlldëz Asani</h1>
+    <p>North Macedonia • Art Historian & Teaching Assistant</p>
+  </header>
+
+  <div class="container">
+    <section class="section" id="about">
+      <h2>🎓 Credentials</h2>
+      <p>
+        Jëlldëz Asani holds a PhD (2017) from the International University of Novi Pazar with a thesis on Albanian contemporary painting. He earned an MA (2010) and BA (2002) from Ss. Cyril and Methodius University, Skopje, focusing on Albanian painters and Impressionism in the region :contentReference[oaicite:1]{index=1}.
+      </p>
+    </section>
+
+    <section class="section" id="academic">
+      <h2>🏛️ Academic Role</h2>
+      <p>
+        Since 2013, he has been a Teaching Assistant in the Department of Arts at the University of Tetova’s Faculty of Arts. He also worked as an assistant from 2007–2013, and previously served as an archaeologist at the National Conservation Center in Skopje :contentReference[oaicite:2]{index=2}.
+      </p>
+    </section>
+
+    <section class="section" id="publications">
+      <h2>📚 Publications</h2>
+      <p>
+        On April 23, 2025, the University of Tetova celebrated his two latest scholarly books: *From Renaissance to the Optical Illusion of Mannerism* and *Light‑Shadows of Baroque & Theatricality of Rococo*. These works contribute significantly to European art studies in Albanian :contentReference[oaicite:3]{index=3}.
+      </p>
+    </section>
+
+    <section class="section" id="expertise">
+      <h2>🖌️ Expertise & Impact</h2>
+      <p>
+        His expertise spans Western figurative art, with a chronological and analytical approach that appeals to students, researchers, and art enthusiasts exploring stylistic developments from the Renaissance to Rococo :contentReference[oaicite:4]{index=4}.
+      </p>
+    </section>
+
+    <section class="section" id="role">
+      <h2>🤝 Role at Struga ’25</h2>
+      <p>
+        At Struga ’25, Jëlldëz contributes his deep knowledge of Western art history through workshops and lectures focused on Renaissance–Rococo periods, enriching the intellectual depth of the symposium.
+      </p>
+    </section>
+
+    <section class="contact section" id="contact">
+      <h2>📬 Contact</h2>
+      <p>Email: <a href="mailto:jelldes.asani@unite.edu.mk">jelldes.asani@unite.edu.mk</a></p>
+      <p>University of Tetova • Faculty of Arts</p>
+    </section>
+  </div>
+
+  <script>
+    const sections = document.querySelectorAll('.section');
+    const onScroll = () => {
+      sections.forEach(sec => {
+        if (sec.getBoundingClientRect().top < window.innerHeight * 0.85) {
+          sec.classList.add('visible');
+        }
+      });
+    };
+    document.addEventListener('scroll', onScroll);
+    onScroll();
+  </script>
+</body>
+</html>

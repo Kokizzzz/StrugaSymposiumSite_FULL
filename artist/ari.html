@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ari de Goes Jr. – Watercolors & Mentorship</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@300;600&display=swap" rel="stylesheet"/>
+  <style>
+    body {
+      margin: 0; padding: 0;
+      font-family: 'Open Sans', sans-serif;
+      background: #fafafa; color: #333;
+      overflow-x: hidden;
+    }
+    header {
+      background: url('header-bg.jpg') center/cover no-repeat;
+      color: #fff; text-align: center;
+      padding: 150px 20px;
+      position: relative;
+    }
+    header::after {
+      content: ''; position: absolute;
+      left: 0; top: 0; width: 100%; height: 100%;
+      background: rgba(0,0,0,0.4);
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem; z-index: 1; position: relative;
+    }
+    header p {
+      font-size: 1.2rem; margin-top: 10px; z-index: 1; position: relative;
+    }
+    .container {
+      max-width: 900px; margin: auto; padding: 60px 20px;
+    }
+    .section {
+      margin-bottom: 60px;
+      opacity: 0; transform: translateY(40px);
+      transition: all 0.8s ease-out;
+    }
+    .section.visible {
+      opacity: 1; transform: translateY(0);
+    }
+    .section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem; color: #2a5d84;
+      margin-bottom: 15px;
+    }
+    .section p {
+      font-size: 1rem; line-height: 1.6;
+    }
+    .highlight { color: #a12312; font-weight: 600; }
+    .contact {
+      background: #2a5d84; color: #fff;
+      padding: 30px;
+      text-align: center;
+    }
+    .contact a {
+      color: #f9cb02; text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+ <header style="background: url('/assets/images2/Ari\ De\ Goes\ br\ -\ Copy.jpg') center/cover no-repeat;">
+    <h1>Ari de Goes Jr.</h1>
+    <p>Watercolorist • Mentor • Ayurvedic Therapist</p>
+  </header>
+
+  <div class="container">
+    <section class="section" id="about">
+      <h2>🎨 About</h2>
+      <p>
+        Born in São Paulo with a background in Advertising and over ten years of experience as a communication entrepreneur,
+        Ari began painting watercolors at age 14. Today, he is dedicated to teaching watercolor techniques and guiding creative processes
+        for both beginners and advanced students.
+      </p>
+    </section>
+
+    <section class="section" id="work">
+      <h2>💼 Work</h2>
+      <p>
+        He offers in-person classes, workshops, and group travel for plein-air painting, fostering artistic and creative development
+        in each participant. His work is recognized nationally and internationally, with highlights including classes in Portugal
+        and multiple watercolor-related events.
+      </p>
+    </section>
+
+    <section class="section" id="mentorship">
+      <h2>🤝 Mentorship & Therapy</h2>
+      <p>
+        In addition to watercolor instruction, Ari is a <span class="highlight">certified Ayurvedic Therapist</span> through the Suddha Dharma Mandalam
+        since 2010 and a practitioner of classical I Ching, offering personal guidance sessions.
+      </p>
+    </section>
+
+    <section class="section" id="social-impact">
+      <h2>🌱 Social Impact</h2>
+      <p>
+        As Director of the NGO Casa da Criança Morro da Penitenciária, Ari participates in projects focused on childhood and adolescence.
+        He also works out of his private studio at the Lotus Branco Center in Florianópolis.
+      </p>
+    </section>
+
+    <section class="contact section" id="contact">
+      <h2>📬 Contact</h2>
+      <p>Email: <a href="mailto:ari@aridegoes.com">ari@aridegoes.com</a></p>
+      <p>Instagram • Facebook • YouTube (social links below)</p>
+    </section>
+  </div>
+
+  <script>
+
+    // Scroll-reveal effect
+    const sections = document.querySelectorAll('.section');
+    const onScroll = () => {
+      sections.forEach(sec => {
+        const rect = sec.getBoundingClientRect();
+        if (rect.top < window.innerHeight * 0.85) sec.classList.add('visible');
+      });
+    };
+    document.addEventListener('scroll', onScroll);
+    onScroll(); // trigger on load
+  </script>
+</body>
+</html>

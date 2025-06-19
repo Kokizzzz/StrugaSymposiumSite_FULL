@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dorothea Fleiss – Visual Artist & Art Therapist</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@300;600&display=swap" rel="stylesheet"/>
+  <style>
+    body { margin:0; padding:0; font-family:'Open Sans',sans-serif; background:#fafafa; color:#333; overflow-x:hidden; }
+    header { background:url('dorothea-bg.jpg') center/cover no-repeat; color:#fff; text-align:center; padding:150px 20px; position:relative; }
+    header::after { content:''; position:absolute; inset:0; background:rgba(0,0,0,0.4); }
+    header h1 { font-family:'Playfair Display',serif; font-size:3.5rem; position:relative; z-index:1; }
+    header p { font-size:1.2rem; margin-top:10px; position:relative; z-index:1; }
+    .container { max-width:900px; margin:auto; padding:60px 20px; }
+    .section { margin-bottom:60px; opacity:0; transform:translateY(40px); transition: all 0.8s ease-out; }
+    .section.visible { opacity:1; transform:translateY(0); }
+    .section h2 { font-family:'Playfair Display',serif; font-size:2rem; color:#2a5d84; margin-bottom:15px; }
+    .section p { font-size:1rem; line-height:1.6; }
+    .contact { background:#2a5d84; color:#fff; padding:30px; text-align:center; }
+    .contact a { color:#f9cb02; text-decoration:none; }
+  </style>
+</head>
+<body>
+ <header style="background: url('/assets/images2/dora.jpg') center/cover no-repeat;">
+    <h1>Dorothea Fleiss</h1>
+    <p>Germany • Visual Artist & Art Therapist</p>
+  </header>
+
+  <div class="container">
+    <section class="section" id="about">
+      <h2>🎨 About</h2>
+      <p>
+        Dorothea Fleiss is a German-born visual artist and art therapist, founder and director of the DFEWA Professional Artists Association in Stuttgart :contentReference[oaicite:1]{index=1}.
+      </p>
+    </section>
+
+    <section class="section" id="education">
+      <h2>📚 Education & Teaching</h2>
+      <p>
+        She studied fine arts in Stuttgart and Filderstadt (1996–2003), earned degrees in art therapy and biosystemic psychotherapy, and completed a doctorate at the National University of Arts in Bucharest :contentReference[oaicite:2]{index=2}. Dorothea has taught internationally—China (Beijing, Inner Mongolia), Romania, Thailand, the USA—and served as visiting lecturer at universities such as Boston College and Northeastern :contentReference[oaicite:3]{index=3}.
+      </p>
+    </section>
+
+    <section class="section" id="work">
+      <h2>💼 Work & Projects</h2>
+      <p>
+        Her multifaceted art practice spans book art, installations, ceramics, film—but especially BookArt. She has curated and curated international exhibitions and symposia, including founding DFEWA residencies in Romania, Austria, India, China, and collaborating on the European International BookArt Biennale :contentReference[oaicite:4]{index=4}.
+      </p>
+    </section>
+
+    <section class="section" id="impact">
+      <h2>🌍 Collections & Influence</h2>
+      <p>
+        Her works are housed in major public collections worldwide—Islip Art Museum (USA), Bibliotheca Alexandria (Egypt), Harbin Art Museum (China), New Orleans’ Hot Iron Press, and many more across Europe, Asia, and the Americas :contentReference[oaicite:5]{index=5}.
+      </p>
+    </section>
+
+    <section class="section" id="role">
+      <h2>🤝 Role at Struga ’25</h2>
+      <p>
+        At this symposium, Dorothea brings her R&D in art therapy, her collaborative leadership through DFEWA, and her expertise in BookArt and installation, hosting workshops, professional talks, and curatorial exchanges.
+      </p>
+    </section>
+
+    <section class="contact section" id="contact">
+      <h2>📬 Contact</h2>
+      <p>Email: <a href="mailto:">[Add email]</a></p>
+      <p>Instagram • Facebook • Website</p>
+    </section>
+  </div>
+
+  <script>
+    const sections = document.querySelectorAll('.section');
+    const onScroll = () => {
+      sections.forEach(sec => {
+        if (sec.getBoundingClientRect().top < window.innerHeight * 0.85) {
+          sec.classList.add('visible');
+        }
+      });
+    };
+    document.addEventListener('scroll', onScroll);
+    onScroll();
+  </script>
+</body>
+</html>

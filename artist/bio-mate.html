@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Máté Rainer – Hungarian Painter & Art Educator</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@300;600&display=swap" rel="stylesheet"/>
+  <style>
+    body { margin:0; padding:0; font-family:'Open Sans',sans-serif; background:#fafafa; color:#333; overflow-x:hidden; }
+    header { background:url('mate-bg.jpg') center/cover no-repeat; color:#fff; text-align:center; padding:150px 20px; position:relative; }
+    header::after { content:''; position:absolute; inset:0; background:rgba(0,0,0,0.4); }
+    header h1 { font-family:'Playfair Display',serif; font-size:3.5rem; position:relative; z-index:1; }
+    header p { font-size:1.2rem; margin-top:10px; position:relative; z-index:1; }
+    .container { max-width:900px; margin:auto; padding:60px 20px; }
+    .section { margin-bottom:60px; opacity:0; transform:translateY(40px); transition:all 0.8s ease-out; }
+    .section.visible { opacity:1; transform:translateY(0); }
+    .section h2 { font-family:'Playfair Display',serif; font-size:2rem; color:#2a5d84; margin-bottom:15px; }
+    .section p { font-size:1rem; line-height:1.6; }
+    .contact { background:#2a5d84; color:#fff; padding:30px; text-align:center; }
+    .contact a { color:#f9cb02; text-decoration:none; }
+  </style>
+</head>
+<body>
+ <header style="background: url('/assets/images2/mate\ ok.jpg') center/cover no-repeat;">
+    <h1>Máté Rainer</h1>
+    <p>Hungary • Painter & Art Educator</p>
+  </header>
+
+  <div class="container">
+    <section class="section" id="about">
+      <h2>🎨 About</h2>
+      <p>
+        Born July 29, 1973 in Budapest, Máté Rainer graduated in painting and art education from the Hungarian University of Fine Arts in 1999. He continued postgraduate studies there and became a member of MAOE and East‑West Artists Association, receiving national scholarships and awards including the prestigious Barcsay Prize in 2007 :contentReference[oaicite:1]{index=1}.
+      </p>
+    </section>
+
+    <section class="section" id="work">
+      <h2>💼 Exhibitions & Practice</h2>
+      <p>
+        Rainer has held numerous solo exhibitions since 1998, including at the Szépművészeti Múzeum’s Marble Hall (Budapest, 2008) and the Várnegyed Gallery (2022). His work has also appeared in group shows across Europe and Asia, highlighting his skilled technical approach :contentReference[oaicite:2]{index=2}.
+      </p>
+    </section>
+
+    <section class="section" id="style">
+      <h2>🖌️ Style & Teaching</h2>
+      <p>
+        Known for expressive abstraction, Máté integrates rich tonal layers with structural clarity. He's also active as a teacher and mentor, bridging academic and studio practices :contentReference[oaicite:3]{index=3}.
+      </p>
+    </section>
+
+    <section class="section" id="role">
+      <h2>🤝 Role at Struga ’25</h2>
+      <p>
+        Bringing a blend of deep artistic insight and pedagogical experience, Máté will lead painting workshops, facilitate technical discussions, and mentor emerging artists during the symposium.
+      </p>
+    </section>
+
+    <section class="contact section" id="contact">
+      <h2>📬 Contact</h2>
+      <p>Email: <a href="mailto:">[Add email]</a></p>
+      <p>Instagram: <a href="https://www.instagram.com/materainer/" target="_blank">@materainer</a></p>
+    </section>
+  </div>
+
+  <script>
+    const sections = document.querySelectorAll('.section');
+    const onScroll = () => {
+      sections.forEach(sec => {
+        if (sec.getBoundingClientRect().top < window.innerHeight * 0.85) sec.classList.add('visible');
+      });
+    };
+    document.addEventListener('scroll', onScroll);
+    onScroll();
+  </script>
+</body>
+</html>

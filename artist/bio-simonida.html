@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simonida F. Kitanovska – Artist & Educator</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@300;600&display=swap" rel="stylesheet"/>
+  <style>
+    body { margin: 0; padding: 0;
+      font-family: 'Open Sans', sans-serif;
+      background: #fafafa; color: #333;
+      overflow-x: hidden;
+    }
+    header {
+      background: url('header-bg.jpg') center/cover no-repeat;
+      color: #fff; text-align: center;
+      padding: 150px 20px;
+      position: relative;
+    }
+    header::after {
+      content: ''; position: absolute;
+      left: 0; top: 0; width: 100%; height: 100%;
+      background: rgba(0,0,0,0.4);
+    }
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3.5rem; z-index: 1; position: relative;
+    }
+    header p {
+      font-size: 1.2rem; margin-top: 10px; z-index: 1; position: relative;
+    }
+    .container {
+      max-width: 900px; margin: auto; padding: 60px 20px;
+    }
+    .section {
+      margin-bottom: 60px;
+      opacity: 0; transform: translateY(40px);
+      transition: all 0.8s ease-out;
+    }
+    .section.visible {
+      opacity: 1; transform: translateY(0);
+    }
+    .section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem; color: #2a5d84;
+      margin-bottom: 15px;
+    }
+    .section p {
+      font-size: 1rem; line-height: 1.6;
+    }
+    .contact {
+      background: #2a5d84; color: #fff;
+      padding: 30px;
+      text-align: center;
+    }
+    .contact a {
+      color: #f9cb02; text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header style="background: url('/assets/images2/smonida.jpg') center/cover no-repeat;">
+    <h1>Simonida F. Kitanovska</h1>
+    <p>North Macedonia • Artist</p>
+  </header>
+
+  <div class="container">
+    <section class="section" id="about">
+      <h2>🎨 About</h2>
+      <p>
+        Born in 1965 in Skopje, Simonida graduated from the Faculty of Fine Arts in 1988 studying under professors Dimitar Kondovski and Rodoljub Anastasov. She has been a member of the Association of Artists of Macedonia since 1988 and has been a full-time professional artist ever since. :contentReference[oaicite:1]{index=1}
+      </p>
+    </section>
+
+    <section class="section" id="work">
+      <h2>💼 Work</h2>
+      <p>
+        After graduation, Simonida’s work was shown at the National Art Gallery in Skopje. She spent 1988–1997 in Boston, exhibiting in the USA (including Boston and New York’s Agora Gallery), and has since shown in numerous solo and group exhibitions across Europe, Asia, Latin America, Canada, and the U.S. Her practice spans oil, acrylic, installation, combined techniques, video—and more recently, she has specialized in watercolor. :contentReference[oaicite:2]{index=2}
+      </p>
+    </section>
+
+    <section class="section" id="role">
+      <h2>🤝 Role at Struga ’25</h2>
+      <p>
+        As an experienced multimedia artist and international exhibitor, Simonida contributes to Struga ’25 through collaborative workshops and mentorship, bringing her diverse practice and global perspective to local and regional audiences.
+      </p>
+    </section>
+
+    <section class="contact section" id="contact">
+      <h2>📬 Contact</h2>
+      <p>Email: <a href="mailto:">[Add email]</a></p>
+      <p>Instagram • Facebook</p>
+    </section>
+  </div>
+
+  <script>
+    const sections = document.querySelectorAll('.section');
+    const onScroll = () => {
+      sections.forEach(sec => {
+        const rect = sec.getBoundingClientRect();
+        if (rect.top < window.innerHeight * 0.85) sec.classList.add('visible');
+      });
+    };
+    document.addEventListener('scroll', onScroll);
+    onScroll();
+  </script>
+</body>
+</html>

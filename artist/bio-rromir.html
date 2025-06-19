@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rromir Imami – Photographer & Mentor</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@300;600&display=swap" rel="stylesheet"/>
+  <style>
+    body { margin:0; padding:0; font-family:'Open Sans',sans-serif; background:#fafafa; color:#333; overflow-x:hidden; }
+    header { background:url('rromir-bg.jpg') center/cover no-repeat; color:#fff; text-align:center; padding:150px 20px; position:relative; }
+    header::after { content:''; position:absolute; inset:0; background:rgba(0,0,0,0.4); }
+    header h1 { font-family:'Playfair Display',serif; font-size:3.5rem; position:relative; z-index:1; }
+    header p { font-size:1.2rem; margin-top:10px; position:relative; z-index:1; }
+    .container { max-width:900px; margin:auto; padding:60px 20px; }
+    .section { margin-bottom:60px; opacity:0; transform:translateY(40px); transition:all 0.8s ease-out; }
+    .section.visible { opacity:1; transform:translateY(0); }
+    .section h2 { font-family:'Playfair Display',serif; font-size:2rem; color:#2a5d84; margin-bottom:15px; }
+    .section p { font-size:1rem; line-height:1.6; }
+    .contact { background:#2a5d84; color:#fff; padding:30px; text-align:center; }
+    .contact a { color:#f9cb02; text-decoration:none; }
+  </style>
+</head>
+<body>
+ <header style="background: url('/assets/images2/rromir\ imami.jpg') center/cover no-repeat;">
+    <h1>Rromir Imami</h1>
+    <p>Switzerland/Kosovo • Portrait & Corporate Photographer</p>
+  </header>
+
+  <div class="container">
+    <section class="section" id="about">
+      <h2>🎨 About</h2>
+      <p>
+        Rromir Imami is an accomplished portrait and corporate photographer originally from Skopje, now based in Switzerland, and founder of RRIM Photo Studio. With over 20 years of experience, he specializes in capturing authentic images in professional settings :contentReference[oaicite:2]{index=2}.
+      </p>
+    </section>
+
+    <section class="section" id="work">
+      <h2>💼 Work & Teaching</h2>
+      <p>
+        He has led workshops at institutions like the International Balkan University and New York Institute of Photography, teaching lighting, composition, and post-production techniques :contentReference[oaicite:3]{index=3}. Rromir also provides professional portrait sessions, including corporate branding and refugee support portraits in Switzerland :contentReference[oaicite:4]{index=4}.
+      </p>
+    </section>
+
+    <section class="section" id="style">
+      <h2>📷 Philosophy & Style</h2>
+      <p>
+        Imami emphasizes communication in portrait photography, viewing the process as a collaborative "dance" among photographer, subject, and viewer. He advocates investing in education and passion over gear :contentReference[oaicite:5]{index=5}.
+      </p>
+    </section>
+
+    <section class="section" id="role">
+      <h2>🤝 Role at Struga ’25</h2>
+      <p>
+        Bringing his engagement-driven portrait expertise, Rromir will host studio workshops on lighting, branding, and emotional storytelling, mentoring participants in striking authentic visual representation.
+      </p>
+    </section>
+
+    <section class="contact section" id="contact">
+      <h2>📬 Contact</h2>
+      <p>Email: <a href="mailto:">[Add email]</a></p>
+      <p>Instagram • Website • RRIM Photo Studio</p>
+    </section>
+  </div>
+
+  <script>
+    const sections = document.querySelectorAll('.section');
+    const onScroll = () => {
+      sections.forEach(sec => {
+        if (sec.getBoundingClientRect().top < window.innerHeight * 0.85) {
+          sec.classList.add('visible');
+        }
+      });
+    };
+    document.addEventListener('scroll', onScroll);
+    onScroll();
+  </script>
+</body>
+</html>

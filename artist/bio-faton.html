@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Faton Murati – Photographer & Visual Storyteller</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;display=swap&family=Open+Sans:wght@300;600;display=swap" rel="stylesheet"/>
+  <style>
+    body { margin:0; padding:0; font-family:'Open Sans',sans-serif; background:#fafafa; color:#333; overflow-x:hidden; }
+    header { background:url('faton-bg.jpg') center/cover no-repeat; color:#fff; text-align:center; padding:150px 20px; position:relative;}
+    header::after {content:'';position:absolute;inset:0;background:rgba(0,0,0,0.4);}
+    header h1 {font-family:'Playfair Display',serif;font-size:3.5rem;position:relative;z-index:1;}
+    header p {font-size:1.2rem;margin-top:10px;position:relative;z-index:1;}
+    .container {max-width:900px;margin:auto;padding:60px 20px;}
+    .section {margin-bottom:60px;opacity:0;transform:translateY(40px);transition:all 0.8s ease-out;}
+    .section.visible {opacity:1;transform:translateY(0);}
+    .section h2 {font-family:'Playfair Display',serif;font-size:2rem;color:#2a5d84;margin-bottom:15px;}
+    .section p {font-size:1rem;line-height:1.6;}
+    .contact {background:#2a5d84;color:#fff;padding:30px;text-align:center;}
+    .contact a {color:#f9cb02;text-decoration:none;}
+  </style>
+</head>
+<body>
+ <header style="background: url('/assets/images2/faton\ murati.jpg') center/cover no-repeat;">
+    <h1>Faton Murati</h1>
+    <p>North Macedonia • Photographer & Visual Storyteller</p>
+  </header>
+
+  <div class="container">
+    <section class="section" id="about">
+      <h2>📷 About</h2>
+      <p>
+        Faton Murati is a Struga-based photographer who began his creative journey in local secondary education at SH.M.K. “Niko Nestor.” His work spans event photography and artistic storytelling rooted in his hometown :contentReference[oaicite:2]{index=2}.
+      </p>
+    </section>
+
+    <section class="section" id="work">
+      <h2>💼 Photography & Events</h2>
+      <p>
+        As official photographer of the International Art Symposium Struga, Faton has captured the evolving narrative of the event across editions—including the 2024 edition’s ninth gathering :contentReference[oaicite:3]{index=3}. Beyond symposiums, he documents cultural moments across Struga and Tetovo through exhibitions and local media :contentReference[oaicite:4]{index=4}.
+      </p>
+    </section>
+
+    <section class="section" id="style">
+      <h2>🎨 Visual Approach</h2>
+      <p>
+        His photographic style emphasizes authentic atmosphere and human connection, capturing both staged artworks and candid moments. He merges technical precision with narrative insight to present events as immersive visual stories.
+      </p>
+    </section>
+
+    <section class="section" id="role">
+      <h2>🤝 Role at Struga ’25</h2>
+      <p>
+        At Struga ’25, Faton will continue crafting the symposium’s visual narrative, offering behind-the-scenes photography, dynamic coverage of plein-air sessions, and mentoring participants in visual documentation techniques.
+      </p>
+    </section>
+
+    <section class="contact section" id="contact">
+      <h2>📬 Contact</h2>
+      <p>Email: <a href="mailto:">[Add email]</a></p>
+      <p>Lives in Struga • Instagram: <a href="https://www.instagram.com/faton.murati/" target="_blank">@faton.murati</a></p>
+    </section>
+  </div>
+
+  <script>
+    const sections = document.querySelectorAll('.section');
+    const onScroll = () => {
+      sections.forEach(sec => {
+        if (sec.getBoundingClientRect().top < window.innerHeight * 0.85) {
+          sec.classList.add('visible');
+        }
+      });
+    };
+    document.addEventListener('scroll', onScroll);
+    onScroll();
+  </script>
+</body>
+</html>

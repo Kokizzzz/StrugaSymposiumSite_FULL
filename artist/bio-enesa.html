@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Enesa Memeti – Art Teacher & Curator</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@300;600&display=swap" rel="stylesheet"/>
+  <style>
+    body { margin:0; padding:0; font-family:'Open Sans',sans-serif; background:#fafafa; color:#333; overflow-x:hidden; }
+    header { background:url('enesa-bg.jpg') center/cover no-repeat; color:#fff; text-align:center; padding:150px 20px; position:relative; }
+    header::after { content:''; position:absolute; inset:0; background:rgba(0,0,0,0.4); }
+    header h1 { font-family:'Playfair Display',serif; font-size:3.5rem; position:relative; z-index:1; }
+    header p { font-size:1.2rem; margin-top:10px; position:relative; z-index:1; }
+    .container { max-width:900px; margin:auto; padding:60px 20px; }
+    .section { margin-bottom:60px; opacity:0; transform:translateY(40px); transition:all 0.8s ease-out; }
+    .section.visible { opacity:1; transform:translateY(0); }
+    .section h2 { font-family:'Playfair Display',serif; font-size:2rem; color:#2a5d84; margin-bottom:15px; }
+    .section p { font-size:1rem; line-height:1.6; }
+    .contact { background:#2a5d84; color:#fff; padding:30px; text-align:center; }
+    .contact a { color:#f9cb02; text-decoration:none; }
+  </style>
+</head>
+<body>
+ <header style="background: url('/assets/images2/jona\ dividi\ -\ Copy.jpg') center/cover no-repeat;">
+    <h1>Enesa Memeti</h1>
+    <p>North Macedonia • Art Teacher & Curator</p>
+  </header>
+
+  <div class="container">
+    <section class="section" id="about">
+      <h2>🎨 About</h2>
+      <p>
+        Professor Enesa Memeti teaches visual arts at the Gjoce Stojčeski Vocational High School in Tetovo, where she organizes and curates student exhibitions focused on thematic and professional development.
+      </p>
+    </section>
+
+    <section class="section" id="work">
+      <h2>💼 Teaching & Exhibitions</h2>
+      <p>
+        Her work includes multiple student-led exhibitions:  
+        – “7 March” at the Culture Palace (2012 & 2017),  
+        – “Golden Years” with graduating classes (2016 & 2021, Gallery of Arts Tetovo),  
+        – “Diary of Knowledge” (2021) :contentReference[oaicite:1]{index=1}.  
+        In April 2025, she opened her second solo show titled “The Black Swan: Symbol of Magnificence” at KIC Skopje, following participation in around 30 group exhibitions :contentReference[oaicite:2]{index=2}.
+      </p>
+    </section>
+
+    <section class="section" id="curation">
+      <h2>🖼️ Curation & Stylistic Themes</h2>
+      <p>
+        Enesa’s curatorial practice highlights student creativity through thematic exhibitions emphasizing symbolism, cultural narratives, and professional presentation. Her solo shows explore metaphor‑rich subjects—such as the Black Swan—to convey elegance and emotional depth.
+      </p>
+    </section>
+
+    <section class="section" id="role">
+      <h2>🤝 Role at Struga ’25</h2>
+      <p>
+        At Struga ’25, Enesa brings her strong background in art education and exhibition-making. She will curate collaborative pupil shows, lead thematic workshops, and mentor emerging artists in thematic storytelling and exhibition curation.
+      </p>
+    </section>
+
+    <section class="contact section" id="contact">
+      <h2>📬 Contact</h2>
+      <p>Email: <a href="mailto:">[Add email]</a></p>
+      <p>Instagram • Facebook • KIC Skopje profile</p>
+    </section>
+  </div>
+
+  <script>
+    const sections = document.querySelectorAll('.section');
+    const onScroll = () => { sections.forEach(sec => { if (sec.getBoundingClientRect().top < window.innerHeight * 0.85) sec.classList.add('visible'); }); };
+    document.addEventListener('scroll', onScroll);
+    onScroll();
+  </script>
+</body>
+</html>

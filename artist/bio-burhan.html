@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Burhan Ahmeti – Graphic Artist, Educator & Organizer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&amp;family=Open+Sans:wght@300;600&amp;display=swap" rel="stylesheet"/>
+  <style>
+    body { margin:0;padding:0;font-family:'Open Sans',sans-serif;background:#fafafa;color:#333;overflow-x:hidden; }
+    header { background:url('burhan-bg.jpg') center/cover no-repeat;color:#fff;text-align:center;padding:150px 20px;position:relative; }
+    header::after { content:'';position:absolute;inset:0;background:rgba(0,0,0,0.4); }
+    header h1 { font-family:'Playfair Display',serif;font-size:3.5rem;position:relative;z-index:1; }
+    header p { font-size:1.2rem;margin-top:10px;position:relative;z-index:1; }
+    .container { max-width:900px;margin:auto;padding:60px 20px; }
+    .section { margin-bottom:60px;opacity:0;transform:translateY(40px);transition:all 0.8s ease-out; }
+    .section.visible { opacity:1;transform:translateY(0); }
+    .section h2 { font-family:'Playfair Display',serif;font-size:2rem;color:#2a5d84;margin-bottom:15px; }
+    .section p { font-size:1rem;line-height:1.6; }
+    .contact { background:#2a5d84;color:#fff;padding:30px;text-align:center; }
+    .contact a { color:#f9cb02;text-decoration:none; }
+  </style>
+</head>
+<body>
+   <header style="background: url('/assets/images2/burhan\ ahmeti.jpg') center/cover no-repeat;">
+    <h1>Burhan Ahmeti</h1>
+    <p>North Macedonia • Graphic Artist, Educator & Symposium Organizer</p>
+  </header>
+
+  <div class="container">
+    <section class="section" id="about">
+      <h2>🎨 About</h2>
+      <p>
+        Born August 18, 1978 in Gostivar, Burhan Ahmeti is a prominent contemporary graphic artist and printmaker educated under the Pollog sky :contentReference[oaicite:2]{index=2}. He holds both MA and PhD in graphics, and is an associate professor at the Faculty of Pedagogy “St. Kliment Ohridski” in Skopje since 2013 :contentReference[oaicite:3]{index=3}.
+      </p>
+    </section>
+
+    <section class="section" id="work">
+      <h2>💼 Career & Style</h2>
+      <p>
+        Specializing in aquatint, dry-needle, copper engraving and digital graphics, his work explores themes of heritage, migration, architecture, and Albanian history, often rendered with poetic abstraction :contentReference[oaicite:4]{index=4}. He’s received awards like the Barcsay Prize (2007), DLUM Skopje First Prize (2010), and special recognitions in Albania and Hungary :contentReference[oaicite:5]{index=5}.
+      </p>
+    </section>
+
+    <section class="section" id="exhibitions">
+      <h2>🖼️ Exhibitions & Symposiums</h2>
+      <p>
+        Burhan has held 15+ solo exhibitions (Zurich, New York, Berlin, Skopje, Sofia, Prishtina, Bucharest) and participated in hundreds of group exhibitions and symposia across Europe, Asia, Antarctica, the USA, and Africa :contentReference[oaicite:6]{index=6}.
+      </p>
+      <p>
+        He directs and organizes international symposia in Gostivar/Struga through Silindart, in collaboration with institutions worldwide—such as the Museum of Contemporary Art Naples and Luxor Atelier :contentReference[oaicite:7]{index=7}.
+      </p>
+    </section>
+
+    <section class="section" id="role">
+      <h2>🤝 Role at Struga ’25</h2>
+      <p>
+        As founder of Silindart and coordinator of the Struga International Painting Symposium, Burhan pulls together artistic, academic, and logistical threads—mentoring participants, curating programming, and building institutional links across the global art community.
+      </p>
+    </section>
+
+    <section class="contact section" id="contact">
+      <h2>📬 Contact</h2>
+      <p>Email: <a href="mailto:artgraphik@yahoo.com">artgraphik@yahoo.com</a></p>
+      <p>Gostivar • Silindart Association • Faculty of Pedagogy Skopje</p>
+    </section>
+  </div>
+
+  <script>
+    const sections = document.querySelectorAll('.section');
+    const onScroll = () => sections.forEach(sec => {
+      if (sec.getBoundingClientRect().top < window.innerHeight * 0.85) sec.classList.add('visible');
+    });
+    document.addEventListener('scroll', onScroll);
+    onScroll();
+  </script>
+</body>
+</html>

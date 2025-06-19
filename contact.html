@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Struga '25 Art Symposium</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <img src="assets/images/silindart.png" alt="Silindart Logo" height="50">
+      </div>
+
+      <div class="menu-toggle" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+
+      <nav class="main-nav">
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="index.html">Artists</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="lang-switcher">
+        <button data-lang="sq">🇦🇱</button>
+        <button data-lang="en">🇬🇧</button>
+        <button data-lang="mk">🇲🇰</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="contact-section">
+
+      <div class="contact-intro">
+        <h1 data-lang-sq="Kontakti & Organizatori"
+            data-lang-en="Contact & Organizer"
+            data-lang-mk="Контакт и Организатор">Contact & Organizer</h1>
+
+        <p data-lang-sq="Për çdo pyetje rreth Simpoziumit Ndërkombëtar të Artit – Struga 2025, ju lutem kontaktoni organizatorin:"
+           data-lang-en="If you have any questions about the 10th International Art Symposium – Struga 2025, feel free to get in touch with the event organizer:"
+           data-lang-mk="За сите прашања поврзани со Меѓународниот Симпозиум на Уметноста – Струга 2025, контактирајте го организаторот:">
+           If you have any questions about the 10th International Art Symposium – Struga 2025, feel free to get in touch with the event organizer:
+        </p>
+      </div>
+
+      <div class="contact-details">
+        <div class="organizer-info">
+          <h2>Burhan Ahmeti</h2>
+          <p data-lang-sq="Organizator & Artist Pamor"
+             data-lang-en="Organizer & Visual Artist"
+             data-lang-mk="Организатор и Визуелен Уметник">Organizer & Visual Artist</p>
+          <p>Email: <a href="mailto:burhanahmeti@gmail.com">burhanahmeti@gmail.com</a></p>
+          <p>Phone: <a href="tel:+38978296061">+389 78 296 061</a></p>
+          <p>Website: <a href="https://www.burhanahmeti.com" target="_blank">www.burhanahmeti.com</a></p>
+          <p data-lang-sq="Vendndodhje: Strugë, Maqedonia e Veriut"
+             data-lang-en="Location: Struga, North Macedonia"
+             data-lang-mk="Локација: Струга, Северна Македонија">Location: Struga, North Macedonia</p>
+        </div>
+
+        <div class="contact-form">
+          <form action="https://formsubmit.co/korabpicart@gmail.com" method="POST" enctype="multipart/form-data">
+            <!-- NAME -->
+            <label for="name" data-lang-sq="Emri juaj:" data-lang-en="Your Name:" data-lang-mk="Вашето име:">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+          
+            <!-- EMAIL -->
+            <label for="email" data-lang-sq="Email-i juaj:" data-lang-en="Your Email:" data-lang-mk="Вашиот емаил:">Your Email:</label>
+            <input type="email" id="email" name="email" required>
+          
+            <!-- MESSAGE -->
+            <label for="message" data-lang-sq="Mesazhi:" data-lang-en="Message:" data-lang-mk="Порака:">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+          
+            <!-- FILE UPLOAD -->
+            <label for="file" data-lang-sq="Ngarko Foto:" data-lang-en="Upload Photo:" data-lang-mk="Прикачи Фото:">Upload Photo:</label>
+            <input type="file" id="file" name="attachment" accept="image/*" required>
+          
+            <!-- HIDDEN CONTROLS -->
+            <input type="hidden" name="_subject" value="New Submission from Struga 2025 Website">
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_next" value="thankyou.html">
+          
+            <!-- SUBMIT BUTTON -->
+            <button type="submit" data-lang-sq="Dërgo" data-lang-en="Send" data-lang-mk="Испрати">Send</button>
+          </form>
+          
+          
+        </div>
+      </div>
+
+      <div class="map-container">
+        <h2 data-lang-sq="Vendndodhja e Eventit"
+            data-lang-en="Event Location"
+            data-lang-mk="Локација на Настанот">Event Location</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3003.2515874109995!2d20.685986!3d41.17267950000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1350e71372ddff9f%3A0x2b8a7337685e39bf!2sHotel%20Solferino!5e0!3m2!1sen!2smk!4v1750239013522!5m2!1sen!2smk" 
+            width="900" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 SILINDART Association for Art and Culture</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

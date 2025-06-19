@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Drenusha Palloshi – Art Educator & Researcher</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans:wght@300;600&display=swap" rel="stylesheet"/>
+  <style>
+    body { margin:0; padding:0; font-family:'Open Sans',sans-serif; background:#fafafa; color:#333; overflow-x:hidden; }
+    header { background:url('drenusha-bg.jpg') center/cover no-repeat; color:#fff; text-align:center; padding:150px 20px; position:relative; }
+    header::after { content:''; position:absolute; inset:0; background:rgba(0,0,0,0.4); }
+    header h1 { font-family:'Playfair Display',serif; font-size:3.5rem; position:relative; z-index:1; }
+    header p { font-size:1.2rem; margin-top:10px; position:relative; z-index:1; }
+    .container { max-width:900px; margin:auto; padding:60px 20px; }
+    .section { margin-bottom:60px; opacity:0; transform:translateY(40px); transition:all 0.8s ease-out; }
+    .section.visible { opacity:1; transform:translateY(0); }
+    .section h2 { font-family:'Playfair Display',serif; font-size:2rem; color:#2a5d84; margin-bottom:15px; }
+    .section p { font-size:1rem; line-height:1.6; }
+    .contact { background:#2a5d84; color:#fff; padding:30px; text-align:center; }
+    .contact a { color:#f9cb02; text-decoration:none; }
+  </style>
+</head>
+<body>
+  <header style="background: url('/assets/images2/drenusha\ palloshi.jpg') center/cover no-repeat;">
+    <h1>Drenusha Palloshi</h1>
+    <p>North Macedonia • Assistant Professor & Art Researcher</p>
+  </header>
+
+  <div class="container">
+    <section class="section" id="about">
+      <h2>🎓 Academic Profile</h2>
+      <p>
+        Dr. Drenusha Palloshi is an Assistant Professor in the Faculty of Arts at the University of Tetovo. She earned her BA (2008–2012) and MA (2014–2015) with theses exploring music–painting synesthesia—“Sounds of Chords in Paintings” and “Musical Reminiscences in Paintings” respectively :contentReference[oaicite:1]{index=1}.
+      </p>
+    </section>
+
+    <section class="section" id="teaching">
+      <h2>🏛️ Teaching & Research</h2>
+      <p>
+        Since December 2018, she has served as an Assistant Professor at UT’s Faculty of Arts, teaching courses in painting, art theory, and interdisciplinary art research. She is fluent in Albanian, Macedonian, English, Serbian, and Spanish :contentReference[oaicite:2]{index=2}.
+      </p>
+    </section>
+
+    <section class="section" id="exhibitions">
+      <h2>💼 Community Engagement</h2>
+      <p>
+        Drenusha has contributed artworks to public benefit exhibitions—like a collective donation of paintings for social causes organized by local cultural institutions :contentReference[oaicite:3]{index=3}.
+      </p>
+    </section>
+
+    <section class="section" id="role">
+      <h2>🤝 Role at Struga ’25</h2>
+      <p>
+        With her background in interdisciplinary art research and teaching, Drenusha will lead theoretical and practical workshops exploring the dialogue between visual art and music, as well as mentoring emerging artists.
+      </p>
+    </section>
+
+    <section class="contact section" id="contact">
+      <h2>📬 Contact</h2>
+      <p>Email: <a href="mailto:drenusha.palloshi@unite.edu.mk">drenusha.palloshi@unite.edu.mk</a></p>
+      <p>University of Tetovo • Faculty of Arts</p>
+    </section>
+  </div>
+
+  <script>
+    const sections = document.querySelectorAll('.section');
+    const onScroll = () => {
+      sections.forEach(sec => {
+        if (sec.getBoundingClientRect().top < window.innerHeight * 0.85) {
+          sec.classList.add('visible');
+        }
+      });
+    };
+    document.addEventListener('scroll', onScroll);
+    onScroll();
+  </script>
+</body>
+</html>
